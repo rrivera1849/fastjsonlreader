@@ -6,7 +6,7 @@ Fast random access to JSONL files via a cached **byte-count lookup index** (`.bc
 
 JSONL (JSON Lines) is a common format where each line is a valid JSON object.  
 Normally, accessing the *nth* line requires scanning from the beginning.  
-`fastjsonlreader` builds and reuses a lightweight cache of byte offsets so you can jump directly to any line in **O(1) file seek time**.
+`fastjsonlreader` builds and reuses a lightweight cache of byte offsets so you can jump directly to any line in **O(1) file seek time**, without ever loading the entire JSONL file into memory.
 
 ---
 
